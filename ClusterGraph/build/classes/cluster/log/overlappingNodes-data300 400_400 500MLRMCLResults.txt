@@ -1,0 +1,6 @@
+parentCluster ==> childCluster    totalParentNodes    overlappingChildNodes    Threshold(%)
+2==>2	48.0    6.0    12.5
+2==>1	48.0    20.0    41.67
+3==>2	14.0    4.0    28.57
+3==>1	14.0    1.0    7.14
+1==>1	2.0    1.0    50.0

@@ -1,0 +1,16 @@
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+.chart-series-line {    
+    -fx-stroke-line-cap: square;
+    -fx-stroke-line-join:round; 
+    -fx-stroke:black;
+}
+.chart-line-symbol{
+    -fx-background-color: black, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}

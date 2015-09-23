@@ -1,0 +1,22 @@
+Cluster Number 6 (t:1200 1300): Total : 9 Nodes ===> 
+Cluster Number 2 (t:1300 1400): 2 Nodes from (t:1200 1300) 27 New Nodes | Total: 29 Nodes
+Cluster Number 1 (t:1300 1400): 7 Nodes from (t:1200 1300) 34 New Nodes | Total: 41 Nodes
+-------------------------------
+Cluster Number 2 (t:1200 1300): Total : 8 Nodes ===> 
+Cluster Number 3 (t:1300 1400): 1 Nodes from (t:1200 1300) 6 New Nodes | Total: 7 Nodes
+Cluster Number 1 (t:1300 1400): 1 Nodes from (t:1200 1300) 40 New Nodes | Total: 41 Nodes
+-------------------------------
+Cluster Number 3 (t:1200 1300): Total : 4 Nodes ===> 
+Cluster Number 1 (t:1300 1400): 1 Nodes from (t:1200 1300) 40 New Nodes | Total: 41 Nodes
+-------------------------------
+Cluster Number 4 (t:1200 1300): Total : 10 Nodes ===> 
+Cluster Number 1 (t:1300 1400): 4 Nodes from (t:1200 1300) 37 New Nodes | Total: 41 Nodes
+-------------------------------
+Cluster Number 5 (t:1200 1300): Total : 2 Nodes ===> 
+Cluster Number 1 (t:1300 1400): 2 Nodes from (t:1200 1300) 39 New Nodes | Total: 41 Nodes
+-------------------------------
+Cluster Number 1 (t:1200 1300): Total : 46 Nodes ===> 
+Cluster Number 2 (t:1300 1400): 8 Nodes from (t:1200 1300) 21 New Nodes | Total: 29 Nodes
+Cluster Number 3 (t:1300 1400): 4 Nodes from (t:1200 1300) 3 New Nodes | Total: 7 Nodes
+Cluster Number 1 (t:1300 1400): 3 Nodes from (t:1200 1300) 38 New Nodes | Total: 41 Nodes
+-------------------------------

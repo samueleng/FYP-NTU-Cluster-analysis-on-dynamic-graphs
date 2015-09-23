@@ -1,0 +1,12 @@
+Cluster Number 2 (t:500 600): Total : 36 Nodes ===> 
+Cluster Number 1 (t:600 700): 12 Nodes from (t:500 600) 51 New Nodes | Total: 63 Nodes
+-------------------------------
+Cluster Number 3 (t:500 600): Total : 26 Nodes ===> 
+Cluster Number 1 (t:600 700): 11 Nodes from (t:500 600) 52 New Nodes | Total: 63 Nodes
+-------------------------------
+Cluster Number 4 (t:500 600): Total : 3 Nodes ===> 
+Cluster Number 1 (t:600 700): 1 Nodes from (t:500 600) 62 New Nodes | Total: 63 Nodes
+-------------------------------
+Cluster Number 1 (t:500 600): Total : 21 Nodes ===> 
+Cluster Number 1 (t:600 700): 4 Nodes from (t:500 600) 59 New Nodes | Total: 63 Nodes
+-------------------------------

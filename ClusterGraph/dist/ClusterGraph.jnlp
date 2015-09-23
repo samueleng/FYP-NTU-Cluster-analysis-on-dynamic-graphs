@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ClusterGraph.jnlp">
+  <information>
+    <title>ClusterGraph</title>
+    <vendor>Kainix</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ClusterGraph.jar" size="45557" download="eager" />
+    <jar href="lib/gs-core-1.3-javadoc.jar" size="2373844" download="eager" />
+    <jar href="lib/gs-core-1.3.jar" size="926273" download="eager" />
+    <jar href="lib/json-20131018-javadoc.jar" size="196288" download="eager" />
+    <jar href="lib/json-20131018.jar" size="65139" download="eager" />
+    <jar href="lib/mbox2-1.0.jar" size="23238" download="eager" />
+    <jar href="lib/menta-regex-0.9.5.jar" size="6004" download="eager" />
+    <jar href="lib/pherd-1.0.jar" size="46227" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ClusterGraph" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="cluster.Main"  name="ClusterGraph" />
+  <update check="always"/>
+</jnlp>
