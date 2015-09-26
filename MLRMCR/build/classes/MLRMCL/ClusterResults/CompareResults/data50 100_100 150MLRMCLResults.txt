@@ -1,0 +1,14 @@
+Cluster Number 3 (t:50 100): Total : 29 Nodes ===> 
+Cluster Number 2 (t:100 150): 4 Nodes from (t:50 100) 4 New Nodes | Total: 8 Nodes
+Cluster Number 3 (t:100 150): 1 Nodes from (t:50 100) 16 New Nodes | Total: 17 Nodes
+Cluster Number 4 (t:100 150): 1 Nodes from (t:50 100) 6 New Nodes | Total: 7 Nodes
+Cluster Number 1 (t:100 150): 3 Nodes from (t:50 100) 5 New Nodes | Total: 8 Nodes
+-------------------------------
+Cluster Number 4 (t:50 100): Total : 1 Nodes ===> 
+Cluster Number 2 (t:100 150): 1 Nodes from (t:50 100) 7 New Nodes | Total: 8 Nodes
+-------------------------------
+Cluster Number 1 (t:50 100): Total : 10 Nodes ===> 
+Cluster Number 2 (t:100 150): 2 Nodes from (t:50 100) 6 New Nodes | Total: 8 Nodes
+Cluster Number 3 (t:100 150): 3 Nodes from (t:50 100) 14 New Nodes | Total: 17 Nodes
+Cluster Number 4 (t:100 150): 1 Nodes from (t:50 100) 6 New Nodes | Total: 7 Nodes
+-------------------------------

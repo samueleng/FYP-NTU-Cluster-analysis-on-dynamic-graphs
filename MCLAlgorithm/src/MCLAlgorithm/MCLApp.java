@@ -60,7 +60,7 @@ public class MCLApp {
         /*Assign corresponding role/column*/
         adjMatrix.get(node1).c[node2] = 1;
         adjMatrix.get(node2).c[node1] = 1;
-        System.out.println("Edge between: " + node1 + " and: " + node2);
+        //System.out.println("Edge between: " + node1 + " and: " + node2);
     }
 
     public void readData(String fileName) throws FileNotFoundException, IOException {
@@ -291,7 +291,7 @@ public class MCLApp {
      Interpret resulting matrix to discover clusters.*/
     public void mcl() throws IOException {
         int iteration = 1;
-        System.out.println("Iteration " + iteration);
+        //System.out.println("Iteration " + iteration);
         transMatrix = expand();
         inflate();
         iteration++;
@@ -299,7 +299,7 @@ public class MCLApp {
         long t1 = System.nanoTime();
         /*Main function calling*/
         while (!checkConvergence()) {
-            System.out.println("Iteration " + iteration);
+            //System.out.println("Iteration " + iteration);
             transMatrix = expand();
             inflate();
             iteration++;

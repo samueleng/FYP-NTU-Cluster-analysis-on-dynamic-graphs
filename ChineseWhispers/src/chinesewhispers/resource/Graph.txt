@@ -1,1 +1,1 @@
-Edge between: 33 and: 66  time: 616  duration : 1
+Edge between: 44 and: 23  time: 154  duration : 1

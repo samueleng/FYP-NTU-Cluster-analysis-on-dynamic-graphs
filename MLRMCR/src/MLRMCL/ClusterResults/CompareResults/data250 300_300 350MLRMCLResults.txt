@@ -1,0 +1,11 @@
+Cluster Number 2 (t:250 300): Total : 16 Nodes ===> 
+Cluster Number 2 (t:300 350): 7 Nodes from (t:250 300) 23 New Nodes | Total: 30 Nodes
+Cluster Number 1 (t:300 350): 1 Nodes from (t:250 300) 1 New Nodes | Total: 2 Nodes
+-------------------------------
+Cluster Number 4 (t:250 300): Total : 2 Nodes ===> 
+Cluster Number 2 (t:300 350): 1 Nodes from (t:250 300) 29 New Nodes | Total: 30 Nodes
+-------------------------------
+Cluster Number 1 (t:250 300): Total : 24 Nodes ===> 
+Cluster Number 2 (t:300 350): 7 Nodes from (t:250 300) 23 New Nodes | Total: 30 Nodes
+Cluster Number 3 (t:300 350): 4 Nodes from (t:250 300) 8 New Nodes | Total: 12 Nodes
+-------------------------------

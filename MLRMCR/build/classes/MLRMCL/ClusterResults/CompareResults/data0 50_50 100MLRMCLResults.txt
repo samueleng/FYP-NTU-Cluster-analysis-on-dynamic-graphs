@@ -1,0 +1,6 @@
+Cluster Number 1 (t:0 50): Total : 42 Nodes ===> 
+Cluster Number 2 (t:50 100): 1 Nodes from (t:0 50) 1 New Nodes | Total: 2 Nodes
+Cluster Number 3 (t:50 100): 8 Nodes from (t:0 50) 21 New Nodes | Total: 29 Nodes
+Cluster Number 4 (t:50 100): 1 Nodes from (t:0 50) 0 New Nodes | Total: 1 Nodes
+Cluster Number 1 (t:50 100): 5 Nodes from (t:0 50) 5 New Nodes | Total: 10 Nodes
+-------------------------------

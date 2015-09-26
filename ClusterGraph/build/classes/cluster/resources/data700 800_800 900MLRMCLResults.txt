@@ -1,9 +1,0 @@
-Cluster Number 3 (t:700 800): Total : 4 Nodes ===> 
-Cluster Number 1 (t:800 900): 2 Nodes from (t:700 800) 45 New Nodes | Total: 47 Nodes
--------------------------------
-Cluster Number 1 (t:700 800): Total : 59 Nodes ===> 
-Cluster Number 2 (t:800 900): 6 Nodes from (t:700 800) 2 New Nodes | Total: 8 Nodes
-Cluster Number 3 (t:800 900): 1 Nodes from (t:700 800) 1 New Nodes | Total: 2 Nodes
-Cluster Number 4 (t:800 900): 2 Nodes from (t:700 800) 2 New Nodes | Total: 4 Nodes
-Cluster Number 1 (t:800 900): 21 Nodes from (t:700 800) 26 New Nodes | Total: 47 Nodes
--------------------------------

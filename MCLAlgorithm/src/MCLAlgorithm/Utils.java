@@ -123,7 +123,7 @@ public class Utils {
         }
     }
 
-    public static void readDynamicData(String input, String fileNumber) {
+        public static void readDynamicData(String input, String fileNumber) {
         String fileName = input.split("\\s+")[0];
         int start, end;
         start = Integer.parseInt(input.split("\\s+")[1]);

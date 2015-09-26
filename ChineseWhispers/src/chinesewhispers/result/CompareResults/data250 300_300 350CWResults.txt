@@ -1,0 +1,19 @@
+Cluster Number 5 :(t:250 300): Total : 12 Nodes ===> 
+Cluster Number 3 :(t:300 350): 1 Nodes from (t:250 300) 21 New Nodes | Total: 22 Nodes
+Cluster Number 2 :(t:300 350): 1 Nodes from (t:250 300) 18 New Nodes | Total: 19 Nodes
+-------------------------------
+Cluster Number 4 :(t:250 300): Total : 3 Nodes ===> 
+Cluster Number 2 :(t:300 350): 1 Nodes from (t:250 300) 18 New Nodes | Total: 19 Nodes
+-------------------------------
+Cluster Number 3 :(t:250 300): Total : 15 Nodes ===> 
+Cluster Number 2 :(t:300 350): 8 Nodes from (t:250 300) 11 New Nodes | Total: 19 Nodes
+-------------------------------
+Cluster Number 2 :(t:250 300): Total : 3 Nodes ===> 
+Cluster Number 2 :(t:300 350): 2 Nodes from (t:250 300) 17 New Nodes | Total: 19 Nodes
+Cluster Number 1 :(t:300 350): 1 Nodes from (t:250 300) 2 New Nodes | Total: 3 Nodes
+-------------------------------
+Cluster Number 1 :(t:250 300): Total : 10 Nodes ===> 
+Cluster Number 3 :(t:300 350): 4 Nodes from (t:250 300) 18 New Nodes | Total: 22 Nodes
+Cluster Number 2 :(t:300 350): 1 Nodes from (t:250 300) 18 New Nodes | Total: 19 Nodes
+Cluster Number 1 :(t:300 350): 1 Nodes from (t:250 300) 2 New Nodes | Total: 3 Nodes
+-------------------------------
