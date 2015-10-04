@@ -22,4 +22,4 @@ Graph1: http://konect.uni-koblenz.de/networks/elec
 Graph2: http://konect.uni-koblenz.de/networks/munmun_digg_reply
 
 Graph3: http://konect.uni-koblenz.de/networks/slashdot-threads 
-![Threshold](samueleng.github.com/samueleng.github.io/image/threshold.png)
+![Threshold](https://github.com/samueleng/samueleng.github.io/tree/master/images/threshold.png)
