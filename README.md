@@ -23,5 +23,19 @@ Graph2: http://konect.uni-koblenz.de/networks/munmun_digg_reply
 
 Graph3: http://konect.uni-koblenz.de/networks/slashdot-threads  
  
+Cluster Graph GUI  
+Similarilty threshold 
+![Threshold](/images/threshold.png?raw=true)  
+
+Capture Snapshot  
+![Snapshot](/images/snapshot.png?raw=true)   
  
-![Threshold](/images/threshold.png?raw=true)
+Showing Node Details
+![NodeDetails](/images/NodeDetails.png?raw=true)    
+
+Showing Timesteps
+![Timesteps](/images/timesteps.png?raw=true)    
+
+Tracing Node 80
+![Trace](/images/trace.png?raw=true) 
+
