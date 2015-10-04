@@ -35,13 +35,16 @@ public class GraphUtils {
 
     String clusterLog;
     List<String> logs = new ArrayList<>();
+    List<String> xCategories = new ArrayList<>();
+    List<String> yCategories = new ArrayList<>();
+    
     List<Map<Cluster, List<Cluster>>> clusterDetailsList = new ArrayList<>();
     static DecimalFormat df = new DecimalFormat("#.##");
     //List to store records
     ObservableList<Record> recordList = FXCollections.observableArrayList();
 
-    public class Record {
-
+    public class Record 
+    {
         private final SimpleStringProperty interval;
         private final SimpleStringProperty parentToChild;
         private final SimpleStringProperty parentNodes;
@@ -75,7 +78,6 @@ public class GraphUtils {
         public String getThreshold() {
             return threshold.get();
         }
-
     }
 
     public static void main(String[] args) {
@@ -85,7 +87,6 @@ public class GraphUtils {
         rr.readNodes("0 100,100 200,200 300,300 400,400 500", "MCL");
         System.out.println(rr.getNodeTrace("367"));
         System.out.println(rr.getClusterTrace("367"));
-
     }
 
     /**
@@ -145,7 +146,6 @@ public class GraphUtils {
             start++;
             count--;
         }
-
     }
 
     /**
@@ -159,6 +159,7 @@ public class GraphUtils {
         List<Map<Integer, List<Integer>>> list = new ArrayList<>();
 
         int count, start = 0;
+        @SuppressWarnings("UnusedAssignment")
         int totalParentNodes = 0, commonNodes = 0;
         count = range.split(",").length;
         while (count != 1) {
@@ -398,8 +399,11 @@ public class GraphUtils {
      */
     public LineChart getLineChart(String range, String algo, double threshold) {
         recordList.clear();
+        xCategories.clear();
+        yCategories.clear();
         int maxClusterNumber = Integer.MIN_VALUE;
-        int start = 0, previous, next;
+        int start = 0;
+        
         //defining the axes
         CategoryAxis xAxis = new CategoryAxis();
         CategoryAxis yAxis = new CategoryAxis();
@@ -407,16 +411,18 @@ public class GraphUtils {
         yAxis.setLabel("Cluster Number");
 
         //creating the chart
-        LineChart<String, String> lineChart
-                = new LineChart<>(xAxis, yAxis);
+        LineChart<String, String> lineChart = new LineChart<>(xAxis, yAxis);
+        
         lineChart.setTitle("Clusters Timeline");  
         lineChart.setStyle("-fx-base: #3366CC;");
+        lineChart.setPrefHeight(750);
         lineChart.setAnimated(false);
         lineChart.setLegendVisible(false);
         lineChart.setOnZoom((ZoomEvent e) -> {
             double zoomFactor = e.getZoomFactor();
-            System.out.println(zoomFactor);
+            System.out.println("ZOOM DATA " + zoomFactor);
         });
+        
         List<Map<Integer, List<Integer>>> clusterMap = read(range, algo, threshold);
         readNodes(range, algo);
 
@@ -424,9 +430,8 @@ public class GraphUtils {
             if (!clusterMap1.isEmpty()) {
                 Set<Integer> keySet = clusterMap1.keySet();
                 Integer max = Collections.max(keySet);
-                if (maxClusterNumber < max) {
-                    maxClusterNumber = max;
-                }
+                if (maxClusterNumber < max) maxClusterNumber = max;
+                
                 for (Map.Entry<Integer, List<Integer>> entrySet : clusterMap1.entrySet()) {
                     List<Integer> value = entrySet.getValue();
                     Integer max1 = Collections.max(value);
@@ -436,16 +441,14 @@ public class GraphUtils {
                 }
             }
         }
-        //Set Y-Axis categories
-        List<String> yCategories = new ArrayList<>();
 
+        //Set Y-Axis categories
         for (int i = 1; i <= maxClusterNumber; i++) {
             yCategories.add("C" + i);
         }
         yAxis.setCategories(FXCollections.observableList(yCategories));
 
         //Set X-Axis categories
-        List<String> xCategories = new ArrayList<>();
         String[] split = range.split(",");
         for (String split1 : split) {
             xCategories.add("T" + split1);
@@ -468,6 +471,16 @@ public class GraphUtils {
             start++;
         }
         return lineChart;
+    }
+    
+    // this function is the get the x Category count 
+    public int getXCategoryCount(){
+        return xCategories.size();
+    }
+    
+    // this function is the get the y Category count
+    public int getYCategoryCount(){
+        return yCategories.size();
     }
 
     /**
@@ -558,9 +571,32 @@ public class GraphUtils {
                 if ((key.getInterval().equals(interval)) && (Objects.equals(key.getClusterNumber(), clusterNumber))) {
                     return key.getNodes();
                 }
+                
                 for (Cluster cluster : value) {
                     if ((cluster.getInterval().equals(interval)) && (Objects.equals(cluster.getClusterNumber(), clusterNumber))) {
                         return cluster.getNodes();
+                    }
+                }
+            }
+        }
+        return null;
+    }
+    
+    Cluster getCluster(String xValue, String yValue){
+        String interval = xValue.substring(1, xValue.length());
+        Integer clusterNumber = Integer.valueOf(yValue.substring(1, yValue.length()));
+        List<Integer> nodes = new ArrayList<>();
+        for (Map<Cluster, List<Cluster>> map : clusterDetailsList) {
+            for (Map.Entry<Cluster, List<Cluster>> entrySet : map.entrySet()) {
+                Cluster key = entrySet.getKey();
+                List<Cluster> value = entrySet.getValue();
+                if ((key.getInterval().equals(interval)) && (Objects.equals(key.getClusterNumber(), clusterNumber))) {
+                    return key;
+                }
+                
+                for (Cluster cluster : value) {
+                    if ((cluster.getInterval().equals(interval)) && (Objects.equals(cluster.getClusterNumber(), clusterNumber))) {
+                        return cluster;
                     }
                 }
             }
