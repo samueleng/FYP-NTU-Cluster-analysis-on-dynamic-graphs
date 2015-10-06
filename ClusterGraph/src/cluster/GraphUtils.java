@@ -413,7 +413,7 @@ public class GraphUtils {
         //creating the chart
         LineChart<String, String> lineChart = new LineChart<>(xAxis, yAxis);
         
-        lineChart.setTitle("Clusters Timeline");  
+        lineChart.setTitle("Clusters Timeline");   
         lineChart.setStyle("-fx-base: #3366CC;");
         lineChart.setPrefHeight(750);
         lineChart.setAnimated(false);

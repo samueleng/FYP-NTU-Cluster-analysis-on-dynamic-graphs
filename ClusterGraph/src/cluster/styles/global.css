@@ -1,16 +1,56 @@
+
+.root {
+    -fx-background-color: linear-gradient(to bottom, derive(#333333,20%),derive(#333333,80%));
+    -fx-font: 12px "Tahoma";
+}
+
+.chart {
+    -fx-padding: 0px;
+}
+
+.chart-plot-background {
+    -fx-background-color: linear-gradient(to bottom, derive(grey,80%),derive(grey,20%));
+}
+
+.axis:bottom {
+    -fx-border-color: derive(darkgrey,-20%) transparent transparent transparent;
+    -fx-border-width: 3;
+}
+
+.axis:left {
+    -fx-border-color: transparent derive(darkgrey,-20%) transparent transparent;
+    -fx-border-width: 3;
+}
+
+.axis-tick-mark, .axis-minor-tick-mark,
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines,
+.chart-vertical-zero-line, .chart-horizontal-zero-line {
+    -fx-stroke: derive(darkgrey, -20%);
+}
+
+.menu-bar {
+    -fx-background-color: linear-gradient(to bottom, derive(darkgrey,40%),derive(darkgrey,20%));
+    -fx-font: 11px "Tahoma";
+}
+
+.table-view{
+    -fx-background-color: linear-gradient(to bottom, derive(darkgrey,40%),derive(darkgrey,20%));
+}
+
 .chart-alternative-row-fill {
     -fx-fill: transparent;
     -fx-stroke: transparent;
-    -fx-stroke-width: 0;
+    -fx-stroke-width: 1;
 }
+
 .chart-series-line {    
-    -fx-stroke-line-cap: square;
+    -fx-stroke-line-cap: round;
     -fx-stroke-line-join:round; 
-    -fx-stroke:black;
+    -fx-stroke:darkcyan;
 }
-.chart-line-symbol{
-    -fx-background-color: black, white;
+
+.chart-line-symbol {
+    -fx-background-color: green, linear-gradient(to bottom, derive(greenyellow,20%),derive(greenyellow,80%));
     -fx-background-insets: 0, 2;
-    -fx-background-radius: 5;
-    -fx-padding: 5;
 }
+

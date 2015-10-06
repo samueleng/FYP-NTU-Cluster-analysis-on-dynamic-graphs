@@ -1,6 +1,7 @@
 package cluster;
 
 import cluster.GraphUtils.Record;
+import java.awt.EventQueue;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -34,6 +35,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Tooltip;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -80,9 +82,10 @@ public class Main extends Application {
         VBox vBox = new VBox();
         vBox.setSpacing(5.0);
         vBox.setPadding(new Insets(5, 5, 5, 5));
-
+        stage.getIcons().add(new Image("cluster/styles/icon-cluster.png"));
         //Application Title
-        stage.setTitle("Timeline");
+        stage.setTitle("A Dynamic Graph Clustering Visual Application"); 
+        
 
         //Choice of algorithm
         algo = graphUtils.getAlgo();
@@ -111,13 +114,15 @@ public class Main extends Application {
                 //To create snapshot of graph
                 WritableImage snapShot = lineChart.snapshot(new SnapshotParameters(), new WritableImage(800, 600));
                 ImageIO.write(SwingFXUtils.fromFXImage(snapShot, null), "png", new File("ClusterTimeline " + new SimpleDateFormat("yyyy-MM-dd hhmm").format(new Date()) + ".png"));
-                JOptionPane.showMessageDialog(null, "Snapshot created");
+                //JOptionPane.showMessageDialog(null, "Snapshot created"); 
+                ShowMessage("Snapshot created");
             } catch (IOException ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
 
-        CheckMenuItem checkMenuNodeDetail = new CheckMenuItem("Node Details");
+        CheckMenuItem checkMenuNodeDetail = new CheckMenuItem("Node Details"); 
+        SetDisplayDetailToNode();
         checkMenuNodeDetail.setOnAction((ActionEvent e) -> {
             if (checkMenuNodeDetail.isSelected()) {
                 SetDetailLabelToEdge();
@@ -197,8 +202,9 @@ public class Main extends Application {
         radioMenuMCL.setToggleGroup(toggleGroup);
         radioMenuMCL.setOnAction((ActionEvent e) -> {
             if (!this.algo.equals("MCL")) {
-                this.newGraphCreated = false;
-                JOptionPane.showMessageDialog(null, "Please create new Graph to be able to adjust Threshold,Trace and Highlight nodes");
+                this.newGraphCreated = false; 
+                //JOptionPane.showMessageDialog(null, "Please create new Graph to be able to adjust Threshold,Trace and Highlight nodes");
+                 ShowMessage("Please create new MCL Graph to be able to adjust Threshold,Trace and Highlight nodes");
             } else {
                 this.newGraphCreated = true;
             }
@@ -212,7 +218,8 @@ public class Main extends Application {
             menuAlgorithm.setText("_MLRMCL");
             if (!this.algo.equals("MLRMCL")) {
                 this.newGraphCreated = false;
-                JOptionPane.showMessageDialog(null, "Please create new Graph to enable adjusting Threshold,Trace and Highlight nodes");
+               // JOptionPane.showMessageDialog(null, "Please create new Graph to enable adjusting Threshold,Trace and Highlight nodes"); 
+                ShowMessage("Please create new MLRMCL Graph to be able to adjust Threshold,Trace and Highlight nodes");
             } else {
                 this.newGraphCreated = true;
             }
@@ -223,9 +230,10 @@ public class Main extends Application {
         radioMenuCW.setToggleGroup(toggleGroup);
         radioMenuCW.setOnAction((ActionEvent e) -> {
             menuAlgorithm.setText("_CW");
-            if (!this.algo.equals("CW")) {
-                this.newGraphCreated = false;
-                JOptionPane.showMessageDialog(null, "Please create new Graph to enable adjusting Threshold,Trace and Highlight nodes");
+            if (!this.algo.equals("CW")) { 
+                this.newGraphCreated = false; 
+               // JOptionPane.showMessageDialog(null, "Please create new Graph to enable adjusting Threshold,Trace and Highlight nodes"); 
+                ShowMessage("Please create new CW Graph to be able to adjust Threshold,Trace and Highlight nodes");
             } else {
                 this.newGraphCreated = true;
             }
@@ -256,7 +264,8 @@ public class Main extends Application {
             try {
                 thresholdLimit = Double.parseDouble(textFieldThreshold.getText());
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "Please enter numeric value only");
+                //JOptionPane.showMessageDialog(null, "Please enter numeric value only"); 
+                ShowMessage("Please enter numeric value only");
                 textFieldThreshold.requestFocus();
             }
             if (thresholdLimit >= 0) {
@@ -266,7 +275,8 @@ public class Main extends Application {
                     vBox.getChildren().add(1, lineChart);
                     tableView.setItems(graphUtils.getTableData());
                 } else {
-                    JOptionPane.showMessageDialog(null, "Please create new Graph first");
+                    //JOptionPane.showMessageDialog(null, "Please create new Graph first"); 
+                    ShowMessage("Please create new Graph first");
                 }
             }
         });
@@ -294,13 +304,15 @@ public class Main extends Application {
                         checkMenuNodeDetail.fire();
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "Enter valid Range");
+                    //JOptionPane.showMessageDialog(null, "Enter valid Range"); 
+                    ShowMessage("Enter valid Range");
                 }
 
             } else {
                 textFieldRange.setText("");
                 textFieldRange.requestFocus();
-                JOptionPane.showMessageDialog(null, "Please select Specify Range");
+                //JOptionPane.showMessageDialog(null, "Please select Specify Range"); 
+                ShowMessage("Please select Specify Range");
             }
         });
 
@@ -332,7 +344,8 @@ public class Main extends Application {
             } else {
                 textTraceNode.setText("");
                 textTraceNode.requestFocus();
-                JOptionPane.showMessageDialog(null, "Please enter node number");
+                //JOptionPane.showMessageDialog(null, "Please enter node number"); 
+                ShowMessage("Please enter node number");
             }
         });
 
@@ -433,7 +446,8 @@ public class Main extends Application {
         m_labelEdgePopupList.add(m_LabelPopup);
 
         m_LabelPopup.setAutoFix(true);
-        m_LabelPopup.setAutoHide(false);
+        m_LabelPopup.setAutoHide(false); 
+        
         
         String detailInfo = getDetailInfoOfEdge(index);
         m_detailLabel = new Label(detailInfo);
@@ -578,7 +592,7 @@ public class Main extends Application {
         setLineThicknessofLineGraph();
         SetDisplayDetailToNode();
         RemoveEdgeDetailLabel();
-        SetDetailLabelToEdge();
+        //SetDetailLabelToEdge();
     }
 
     private void RemoveEdgeDetailLabel() {
@@ -644,5 +658,13 @@ public class Main extends Application {
                 }
             }
         }
-    }
+    } 
+    private void ShowMessage(String message) {
+    EventQueue.invokeLater(new Runnable() {
+        @Override
+        public void run() {
+            JOptionPane.showMessageDialog(null, message);
+        }
+    });
+}
 }
