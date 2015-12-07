@@ -15,7 +15,6 @@ public class readWriteHashMap {
 
     public void writeHashMap(HashMap hashmap) throws IOException {
         File file = new File(Utils.getFilePath() + "/MCLAlgorithm/result/results1000.txt");
-//        File file = new File("/home/deepak/freelance/results/results1000.txt");//your file
         {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
                 for (Object p : hashmap.keySet()) {
